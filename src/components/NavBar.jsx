@@ -24,7 +24,7 @@ const NavBar = () =>{
     <React.Fragment>
     <AppBar position="fixed" color="primary">
       <Toolbar>
-          <IconButton className = {classes.menuButton} color="inherit" aria-lable="menu">
+          <IconButton edge="start" className = {classes.menuButton} color="inherit" aria-lable="menu">
             <MenuIcon/>
           </IconButton>
         <Typography variant="h6" className={classes.title} >
