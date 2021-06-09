@@ -27,7 +27,7 @@ const NavBar = () =>{
           <IconButton edge="start" className = {classes.menuButton} color="inherit" aria-lable="menu">
             <MenuIcon/>
           </IconButton>
-        <Typography variant="h6" className={classes.title} >
+        <Typography align="center" variant="h6" className={classes.title} >
           GPUMinerShop
         </Typography>
 
