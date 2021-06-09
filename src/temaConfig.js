@@ -7,6 +7,9 @@ const theme = createMuiTheme({
     primary: deepOrange,
     secondary: purple,
   },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
 });
 
 export default theme;
