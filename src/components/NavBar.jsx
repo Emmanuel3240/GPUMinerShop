@@ -6,23 +6,12 @@ import { makeStyles, IconButton, Button} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
+import {NavBarStyles} from './Styles/NavBarStyles';
 
-
-const useStyle = makeStyles((theme) => ({
-    offset: {
-      ...theme.mixins.toolbar,
-      marginBottom: "1rem",
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-      },
-      title: {
-          flexGrow: 1, 
-      }
-  }));
+const useStyles = makeStyles((theme) => NavBarStyles(theme));
 
 const NavBar = () =>{
-    const classes = useStyle();
+    const classes = useStyles();
     return (
     <React.Fragment>
     <AppBar position="fixed" color="primary">
