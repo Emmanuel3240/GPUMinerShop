@@ -4,7 +4,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, IconButton, Button} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
-import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
 import {NavBarStyles} from './NavBarStyles';
 import Badge from './CartWidget'
@@ -20,24 +19,28 @@ const NavBar = () =>{
           <IconButton edge="start" className = {classes.menuButton} color="inherit">
             <MenuIcon/>
           </IconButton>
+
           <Button variant="text" color="inherit">
           Home
-        </Button>
-        <Button variant="text" color="inherit">
+          </Button>
+
+          <Button variant="text" color="inherit">
           Store
-        </Button>
-        <Button variant="text" color="inherit">
+          </Button>
+
+          <Button variant="text" color="inherit">
           About
-        </Button>
-        <Typography align="center" variant="h6" className={classes.title} >
-          GPUMinerShop
-        </Typography>
-        <IconButton aria-label="show cart items" color="inherit">
+          </Button>
+
+          <Typography align="center" variant="h6" className={classes.title} >
+            GPUMinerShop
+          </Typography>
+          
           <Badge/>
-        </IconButton>
-        <Button variant="text" color="inherit" endIcon={<PersonIcon/>}>
-          Login
-        </Button>
+       
+          <Button variant="text" color="inherit" endIcon={<PersonIcon/>}>
+            Login
+          </Button>
       </Toolbar>
     </AppBar>
     <div className={classes.offset}></div>
