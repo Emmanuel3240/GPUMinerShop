@@ -6,7 +6,7 @@ import { makeStyles, IconButton, Button} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import PersonIcon from '@material-ui/icons/Person';
 import {NavBarStyles} from './NavBarStyles';
-import Badge from './CartWidget'
+import CartWidget from './CartWidget'
 
 const useStyles = makeStyles((theme) => NavBarStyles(theme));
 
@@ -36,7 +36,7 @@ const NavBar = () =>{
             GPUMinerShop
           </Typography>
           
-          <Badge/>
+          <CartWidget/>
        
           <Button variant="text" color="inherit" endIcon={<PersonIcon/>}>
             Login
