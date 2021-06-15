@@ -2,13 +2,13 @@ export const NavBarStyles = theme => {
   return ({
     offset: {
       ...theme.mixins.toolbar,
-      marginBottom: "1rem",
+      marginBottom: '1rem'
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(2)
     },
     title: {
-      flexGrow: 1,
+      flexGrow: 1
     }
   })
-};
+}

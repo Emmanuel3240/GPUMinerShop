@@ -1,19 +1,19 @@
-import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles, IconButton, Button } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import PersonIcon from "@material-ui/icons/Person";
-import { NavBarStyles } from "./NavBarStyles";
-import CartWidget from "./CartWidget";
+import React from 'react'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles, IconButton, Button } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
+import PersonIcon from '@material-ui/icons/Person'
+import { NavBarStyles } from './NavBarStyles'
+import CartWidget from './CartWidget'
 
-const useStyles = makeStyles((theme) => NavBarStyles(theme));
+const useStyles = makeStyles((theme) => NavBarStyles(theme))
 
 const NavBar = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
-    <React.Fragment>
+    <>
       <AppBar position="fixed" color="primary">
         <Toolbar>
           <IconButton
@@ -42,8 +42,8 @@ const NavBar = () => {
         </Toolbar>
       </AppBar>
       <div className={classes.offset}></div>
-    </React.Fragment>
-  );
-};
+    </>
+  )
+}
 
-export default NavBar;
+export default NavBar
