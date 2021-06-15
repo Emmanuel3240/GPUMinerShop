@@ -1,7 +1,10 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
 const ItemListContainer = () => {
-  return <h2 align="center">Aca va ir el contenido</h2>
+  return <div>
+    <ItemCount/>
+    </div>
 }
 
 export default ItemListContainer
