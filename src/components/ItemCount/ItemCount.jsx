@@ -21,7 +21,7 @@ const ItemCount = (cantidad) => {
   return (
     <div align="center" border={1}>
       <h2>nVidia RTX 3090</h2>
-      <h2>Stock: 10</h2>
+      <h4>Stock: 10</h4>
       <Box display="flex" flexDirection="row" justifyContent="center">
         <h2 style={{ paddingRight: 20 }}>{contador}</h2>
         <ButtonGroup
