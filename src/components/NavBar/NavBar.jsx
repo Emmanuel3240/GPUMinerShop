@@ -6,7 +6,7 @@ import { makeStyles, IconButton, Button } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import PersonIcon from '@material-ui/icons/Person'
 import { NavBarStyles } from './NavBarStyles'
-import CartWidget from './CartWidget'
+import CartWidget from '../CartWidget/CartWidget'
 
 const useStyles = makeStyles((theme) => NavBarStyles(theme))
 
