@@ -1,13 +1,15 @@
 import React from 'react'
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from './temaConfig'
 
 function App () {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <NavBar />
       <ItemListContainer />
-    </>
+    </ThemeProvider>
   )
 }
 

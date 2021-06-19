@@ -1,49 +1,68 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
-import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
+import ButtonBase from '@material-ui/core/ButtonBase'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345
+    flexGrow: 1
   },
-  media: {
-    height: 140
+  paper: {
+    padding: theme.spacing(2),
+    margin: 'auto',
+    maxWidth: 500
+  },
+  image: {
+    width: 128,
+    height: 128
+  },
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%'
   }
-})
+}))
 
-export default function Item () {
+export default function ComplexGrid () {
   const classes = useStyles()
 
   return (
-    <div>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3090/geforce-rtx-3090-product-gallery-full-screen-3840-2.jpg"
-            title="RTX3090"
-          />
-          <CardContent>
-            <Typography align= "center" gutterBottom variant="h5" component="h2">
-              GeForce RTX 3090
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-<Button variant="outlined" color="primary">
-  Comprar
-</Button>
-<Button variant="outlined" color="primary">
-  Agregar al carrito
-</Button>
-        </CardActions>
-      </Card>
+    <div className={classes.root}>
+      <Paper className={classes.paper}>
+        <Grid container spacing={2}>
+          <Grid item>
+            <ButtonBase className={classes.image}>
+              <img className={classes.img} alt="complex" src="https://acortar.link/Nbuqy" />
+            </ButtonBase>
+          </Grid>
+          <Grid item xs={8} xm={4} xl={2} sm container>
+            <Grid item xs container direction="column" spacing={2}>
+              <Grid item xs>
+                <Typography gutterBottom variant="subtitle1">
+                  RTX 3090
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  24 GB
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  ID: 39
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                  Agregar
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">$19.00</Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
     </div>
   )
 }
