@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
 import { Card, CardContent, CardMedia, CardActions, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -10,11 +12,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column'
   },
-  cardMedia: {
-    paddingTop: '56.25%'
-  },
   cardContent: {
     flexGrow: 1
+  },
+  cardIdPrecio: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   cardActions: {
     flexDirection: 'row',
@@ -22,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export const Item = (item) => {
+export const Item = props => {
   const classes = useStyles()
   return (
         <Grid item xs={12} sm={6} md={4}>
@@ -30,21 +35,24 @@ export const Item = (item) => {
             <CardMedia
             component='img'
             className={classes.cardMedia}
-            image = {item.picture.pictureUrl}
-            title = {item.picture.alt}
+            image = {props.picture.pictureUrl}
+            title = {props.picture.alt}
             />
             <CardContent className={classes.cardContent}>
-              <Typography variant="h7" gutterBottom>
-                {item.title}
+              <Typography variant="h6" gutterBottom>
+                {props.title}
+              </Typography>
+              <div className={classes.cardIdPrecio}>
+              <Typography variant="subtitle2" gutterBottom>
+                ID: {props.id}
               </Typography>
               <Typography variant="subtitle1" display="block" gutterBottom>
-                $ {item.price}
+                $ {props.price}
               </Typography>
-              <Typography variant="subtitle2" gutterBottom>
-                {item.id}
-              </Typography>
+              </div>
+              <Divider variant="middle" />
               <Typography variant="caption" gutterBottom>
-                {item.description}
+                {props.description}
               </Typography>
               <CardActions className={classes.cardActions}>
               <Button size="small" variant="outlined"color="primary">Detalles</Button>
