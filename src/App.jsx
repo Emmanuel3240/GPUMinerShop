@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './components/NavBar/NavBar'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemListContainer } from './screens/ItemListContainer/ItemListContainer'
 import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './temaConfig'
 

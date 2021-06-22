@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ItemList } from '../ItemList/ItemList'
+import { ItemList } from './components/ItemList/ItemList'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
