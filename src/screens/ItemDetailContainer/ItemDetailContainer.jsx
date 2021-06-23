@@ -3,7 +3,7 @@ import { ItemDetail } from './components/ItemList/ItemList'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
-import myPromise from '../../services/ItemsAPI'
+import { myPromise } from '../../services/ItemsAPI'
 
 const useStyles = makeStyles((theme) => ({
   container: {
