@@ -1,67 +1,105 @@
 const data = [{
   id: '39',
-  title: 'nVidia Geforce RTX3090',
+  brand: 'nvidia',
+  title: 'Geforce RTX 3090',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1499,
   picture: {
     pictureUrl: 'https://acortar.link/La92a',
-    alt: 'Geforce RTX3090'
+    alt: 'RTX3090'
   },
-  stock: 100
-},
-{
-  id: '38ti',
-  title: 'nVidia Geforce RTX3080Ti',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
-  price: 1299,
-  picture: {
-    pictureUrl: 'https://acortar.link/hWpLn',
-    alt: 'Geforce RTX3080Ti'
-  },
+  ethash: 114,
   stock: 100
 },
 {
   id: '38',
-  title: 'nVidia Geforce RTX3080',
+  brand: 'nvidia',
+  title: 'Geforce RTX 3080',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1199,
   picture: {
     pictureUrl: 'https://acortar.link/DIDk2',
-    alt: 'Geforce RTX3090'
+    alt: 'RTX3090'
   },
-  stock: 100
-},
-{
-  id: '37ti',
-  title: 'nVidia Geforce RTX3070Ti',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
-  price: 999,
-  picture: {
-    pictureUrl: 'https://acortar.link/pOtW4',
-    alt: 'Geforce RTX3070Ti'
-  },
+  ethash: 91.5,
   stock: 100
 },
 {
   id: '37',
-  title: 'nVidia Geforce RTX3070',
+  brand: 'nvidia',
+  title: 'Geforce RTX 3070',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
     pictureUrl: 'https://acortar.link/rdbp5',
-    alt: 'Geforce RTX3070'
+    alt: 'RTX3070'
   },
+  ethash: 58.1,
   stock: 100
 },
 {
   id: '36ti',
-  title: 'nVidia Geforce RTX3060Ti',
+  brand: 'nvidia',
+  title: 'Geforce RTX 3060Ti',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 599,
   picture: {
     pictureUrl: 'https://acortar.link/azYFo',
-    alt: 'Geforce RTX3060Ti'
+    alt: 'RTX3060Ti'
   },
+  ethash: 58.1,
+  stock: 100
+},
+{
+  id: '68xt',
+  brand: 'amd',
+  title: 'Radeon RX 6800 XT',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
+  price: 799,
+  picture: {
+    pictureUrl: 'https://acortar.link/rdbp5',
+    alt: '6800XT'
+  },
+  ethash: 64,
+  stock: 100
+},
+{
+  id: '67xt',
+  brand: 'amd',
+  title: 'Radeon RX 6700 XT',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
+  price: 799,
+  picture: {
+    pictureUrl: 'https://acortar.link/rdbp5',
+    alt: '6700XT'
+  },
+  ethash: 48,
+  stock: 100
+},
+{
+  id: '57xt',
+  brand: 'amd',
+  title: 'Radeon RX 5700 XT',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
+  price: 799,
+  picture: {
+    pictureUrl: 'https://acortar.link/rdbp5',
+    alt: '5700XT'
+  },
+  ethash: 55,
+  stock: 100
+},
+{
+  id: '56xt',
+  brand: 'amd',
+  title: 'Radeon RX 5600 XT',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
+  price: 799,
+  picture: {
+    pictureUrl: 'https://acortar.link/rdbp5',
+    alt: '5600XT'
+  },
+  ethash: 40.5,
   stock: 100
 }
 ]

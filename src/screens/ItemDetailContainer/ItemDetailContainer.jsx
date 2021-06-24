@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
   const [items, setItem] = useState([])
   useEffect(() => {
     myPromise.then(itemsData => {
-      const filteredItems = itemsData.filter(element => element.id.includes('37ti'))
+      const filteredItems = itemsData.filter(element => element.id.includes('36ti'))
       setItem(filteredItems)
     })
   }, [])
