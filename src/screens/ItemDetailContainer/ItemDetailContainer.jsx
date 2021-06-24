@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ItemDetail } from './components/ItemList/ItemList'
+import { ItemDetail } from './components/ItemDetail/ItemDetail'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
@@ -8,15 +8,18 @@ import { myPromise } from '../../services/ItemsAPI'
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6)
+    padding: theme.spacing(4, 0, 2)
   }
 }))
 
-export const ItemDetailContainer = props => {
+export const ItemDetailContainer = () => {
   const classes = useStyles()
-  const [items, setItems] = useState([])
+  const [items, setItem] = useState([])
   useEffect(() => {
-    myPromise.then(itemsData => setItems(itemsData))
+    myPromise.then(itemsData => {
+      const filteredItems = itemsData.filter(element => element.id.includes('37ti'))
+      setItem(filteredItems)
+    })
   }, [])
   return <>
   <main>

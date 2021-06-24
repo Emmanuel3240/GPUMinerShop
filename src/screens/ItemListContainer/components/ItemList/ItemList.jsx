@@ -7,7 +7,7 @@ import { Container } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
-    padding: '20px 0'
+    padding: '5px 0'
   },
   root: {
     display: 'flex',

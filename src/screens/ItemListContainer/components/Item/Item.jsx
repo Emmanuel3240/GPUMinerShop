@@ -1,31 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import { ItemStyles } from './ItemStyles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import { Card, CardContent, CardMedia, CardActions, Button } from '@material-ui/core'
+import Dotdotdot from 'react-dotdotdot'
 
-const useStyles = makeStyles((theme) => ({
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  cardContent: {
-    flexGrow: 1
-  },
-  cardIdPrecio: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  cardActions: {
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  }
-}))
+const useStyles = makeStyles((theme) => ItemStyles(theme))
 
 export const Item = props => {
   const classes = useStyles()
@@ -51,9 +34,9 @@ export const Item = props => {
               </Typography>
               </div>
               <Divider variant="middle" />
-              <Typography variant="caption" gutterBottom>
+              <Dotdotdot clamp={4}><Typography variant="body2" display="block" gutterBottom>
                 {props.description}
-              </Typography>
+                </Typography></Dotdotdot>
               <CardActions className={classes.cardActions}>
               <Button size="small" variant="outlined"color="primary">Detalles</Button>
               <Button size="small" variant="contained" color="primary">Comprar</Button>
