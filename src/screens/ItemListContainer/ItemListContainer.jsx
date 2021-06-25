@@ -12,22 +12,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export const ItemListContainer = props => {
+export const ItemListContainer = (props) => {
   const classes = useStyles()
   const [items, setItems] = useState([])
   useEffect(() => {
-    myPromise.then(itemsData => setItems(itemsData))
+    myPromise.then((itemsData) => setItems(itemsData))
   }, [])
-  return <>
-  <main>
-    <div className={classes.container}>
-      <Container maxWidth="sm">
-        <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
-          Nuestros Productos
-        </Typography>
-      </Container>
+  return (
+    <main>
+      <div className={classes.container}>
+        <Container maxWidth="sm">
+          <Typography
+            variant="h2"
+            align="center"
+            color="textPrimary"
+            gutterBottom>
+            Nuestros Productos
+          </Typography>
+        </Container>
       </div>
-  <ItemList items={items}/>
-  </main>
-  </>
+      <ItemList items={items} />
+    </main>
+  )
 }

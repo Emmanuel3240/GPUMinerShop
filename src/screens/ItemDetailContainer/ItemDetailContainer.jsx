@@ -16,21 +16,27 @@ export const ItemDetailContainer = () => {
   const classes = useStyles()
   const [items, setItem] = useState([])
   useEffect(() => {
-    myPromise.then(itemsData => {
-      const filteredItems = itemsData.filter(element => element.id.includes('36ti'))
+    myPromise.then((itemsData) => {
+      const filteredItems = itemsData.filter((element) =>
+        element.id.includes('36ti')
+      )
       setItem(filteredItems)
     })
   }, [])
-  return <>
-  <main>
-    <div className={classes.container}>
-      <Container maxWidth="sm">
-        <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
-          Detalle del Producto
-        </Typography>
-      </Container>
+  return (
+    <main>
+      <div className={classes.container}>
+        <Container maxWidth="sm">
+          <Typography
+            variant="h2"
+            align="center"
+            color="textPrimary"
+            gutterBottom>
+            Detalle del Producto
+          </Typography>
+        </Container>
       </div>
-  <ItemDetail items={items}/>
-  </main>
-  </>
+      <ItemDetail items={items} />
+    </main>
+  )
 }

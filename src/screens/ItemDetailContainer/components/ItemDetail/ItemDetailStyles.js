@@ -1,5 +1,14 @@
-export const ItemStyles = (theme) => {
+export const ItemDetailStyles = (theme) => {
   return {
+    cardGrid: {
+      padding: '5px 0'
+    },
+    root: {
+      display: 'flex',
+      '& > * + *': {
+        marginLeft: theme.spacing(2)
+      }
+    },
     card: {
       height: '100%',
       display: 'flex',

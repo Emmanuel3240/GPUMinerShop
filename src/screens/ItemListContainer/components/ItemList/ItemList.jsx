@@ -22,11 +22,10 @@ export const ItemList = props => {
   const producto = props.items.map((item, i) => {
     return <Item key={i} {...item} />
   })
-  return <>
+  return (
   <Container className={classes.cardGrid} maxWidth="md">
     <Grid container spacing ={4}>
     { producto }
     </Grid>
-  </Container>
-  </>
+  </Container>)
 }

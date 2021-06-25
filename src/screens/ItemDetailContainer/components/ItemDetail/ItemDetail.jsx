@@ -2,39 +2,12 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+import { ItemDetailStyles } from './ItemStyles'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import { Container, Card, CardContent, CardMedia, CardActions, Button } from '@material-ui/core'
 
-const useStyles = makeStyles((theme) => ({
-  cardGrid: {
-    padding: '5px 0'
-  },
-  root: {
-    display: 'flex',
-    '& > * + *': {
-      marginLeft: theme.spacing(2)
-    }
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  cardContent: {
-    flexGrow: 1
-  },
-  cardIdPrecio: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  cardActions: {
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  }
-}))
+const useStyles = makeStyles((theme) => ItemDetailStyles(theme))
 
 export const ItemDetail = props => {
   const classes = useStyles()
