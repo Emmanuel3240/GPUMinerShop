@@ -57,7 +57,7 @@ const data = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/rdbp5',
+    pictureUrl: 'https://acortar.link/UGhAH',
     alt: '6800XT'
   },
   ethash: 64,
@@ -70,7 +70,7 @@ const data = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/rdbp5',
+    pictureUrl: 'https://acortar.link/EjIO0',
     alt: '6700XT'
   },
   ethash: 48,
@@ -83,7 +83,7 @@ const data = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/rdbp5',
+    pictureUrl: 'https://acortar.link/yVAFs',
     alt: '5700XT'
   },
   ethash: 55,
@@ -96,7 +96,7 @@ const data = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/rdbp5',
+    pictureUrl: 'https://acortar.link/c2aLH',
     alt: '5600XT'
   },
   ethash: 40.5,

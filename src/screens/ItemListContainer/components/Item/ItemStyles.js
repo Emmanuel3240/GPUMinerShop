@@ -1,4 +1,4 @@
-export const useStyles = theme => {
+export const ItemStyles = theme => {
   return ({
     card: {
       height: '100%',
