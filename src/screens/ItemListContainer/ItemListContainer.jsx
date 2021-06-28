@@ -3,7 +3,7 @@ import { ItemList } from './components/ItemList/ItemList'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
-import { myPromise } from '../../services/ItemsAPI'
+import { ItemsAPI } from '../../services/ItemsAPI'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -16,7 +16,7 @@ export const ItemListContainer = (props) => {
   const classes = useStyles()
   const [items, setItems] = useState([])
   useEffect(() => {
-    myPromise.then((itemsData) => setItems(itemsData))
+    ItemsAPI.then((itemsData) => setItems(itemsData))
   }, [])
   return (
     <main>

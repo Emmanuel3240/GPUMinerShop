@@ -1,11 +1,11 @@
-const data = [{
+const items = [{
   id: '39',
   brand: 'nvidia',
   title: 'Geforce RTX 3090',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1499,
   picture: {
-    pictureUrl: 'https://acortar.link/La92a',
+    pictureUrl: 'https://acortar.link/hV0Kv',
     alt: 'RTX3090'
   },
   ethash: 114,
@@ -18,7 +18,7 @@ const data = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1199,
   picture: {
-    pictureUrl: 'https://acortar.link/DIDk2',
+    pictureUrl: 'https://acortar.link/BExys',
     alt: 'RTX3090'
   },
   ethash: 91.5,
@@ -31,7 +31,7 @@ const data = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/rdbp5',
+    pictureUrl: 'https://acortar.link/zUAw4',
     alt: 'RTX3070'
   },
   ethash: 58.1,
@@ -101,9 +101,8 @@ const data = [{
   },
   ethash: 40.5,
   stock: 100
-}
-]
+}]
 
-export const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => resolve(data), 2000)
+export const ItemsAPI = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(items), 2000)
 })

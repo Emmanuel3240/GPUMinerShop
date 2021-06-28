@@ -1,16 +1,15 @@
 import React from 'react'
-import NavBar from './components/NavBar/NavBar'
-/* import { ItemDetailContainer } from './screens/ItemDetailContainer/ItemDetailContainer'
- */import { ItemListContainer } from './screens/ItemListContainer/ItemListContainer'
 import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './temaConfig'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './router/Router'
 
 function App () {
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
-      <ItemListContainer />
-      {/* <ItemDetailContainer /> */}
+    <BrowserRouter>
+    <Router/>
+    </BrowserRouter>
     </ThemeProvider>
   )
 }

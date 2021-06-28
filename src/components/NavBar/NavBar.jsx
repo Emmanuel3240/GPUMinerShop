@@ -10,7 +10,7 @@ import CartWidget from '../CartWidget/CartWidget'
 
 const useStyles = makeStyles((theme) => NavBarStyles(theme))
 
-const NavBar = () => {
+export const NavBar = () => {
   const classes = useStyles()
   return (
     <>
@@ -45,5 +45,3 @@ const NavBar = () => {
     </>
   )
 }
-
-export default NavBar

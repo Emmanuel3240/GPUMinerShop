@@ -2,7 +2,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
-import { ItemDetailStyles } from './ItemStyles'
+import { ItemDetailStyles } from './ItemDetailStyles'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import { Container, Card, CardContent, CardMedia, CardActions, Button } from '@material-ui/core'

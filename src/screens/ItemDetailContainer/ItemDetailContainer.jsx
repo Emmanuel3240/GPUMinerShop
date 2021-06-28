@@ -3,7 +3,7 @@ import { ItemDetail } from './components/ItemDetail/ItemDetail'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
-import { myPromise } from '../../services/ItemsAPI'
+import { ItemsAPI } from '../../services/ItemsAPI'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -16,7 +16,7 @@ export const ItemDetailContainer = () => {
   const classes = useStyles()
   const [items, setItem] = useState([])
   useEffect(() => {
-    myPromise.then((itemsData) => {
+    ItemsAPI.then((itemsData) => {
       const filteredItems = itemsData.filter((element) =>
         element.id.includes('36ti')
       )
