@@ -4,7 +4,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, IconButton, Button } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import PersonIcon from '@material-ui/icons/Person'
 import { NavBarStyles } from './NavBarStyles'
 import CartWidget from '../CartWidget/CartWidget'
 
@@ -24,21 +23,15 @@ export const NavBar = () => {
             <MenuIcon />
           </IconButton>
           <Button variant="text" color="inherit">
-            Home
+            Nvidia
           </Button>
           <Button variant="text" color="inherit">
-            Store
-          </Button>
-          <Button variant="text" color="inherit">
-            About
+            Amd
           </Button>
           <Typography align="center" variant="h6" className={classes.title}>
             GPUMinerShop
           </Typography>
           <CartWidget />
-          <Button variant="text" color="inherit" endIcon={<PersonIcon />}>
-            Login
-          </Button>
         </Toolbar>
       </AppBar>
       <div className={classes.offset}></div>

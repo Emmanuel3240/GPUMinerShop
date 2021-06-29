@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
 import { ItemsAPI } from '../../services/ItemsAPI'
+import { useParams } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -15,9 +16,14 @@ const useStyles = makeStyles((theme) => ({
 export const ItemListContainer = (props) => {
   const classes = useStyles()
   const [items, setItems] = useState([])
+  const { brandId } = useParams()
   useEffect(() => {
-    ItemsAPI.then((itemsData) => setItems(itemsData))
-  }, [])
+    ItemsAPI().then((response) =>
+      brandId === undefined
+        ? setItems(response)
+        : setItems(response.filter((element) => element.category === brandId))
+    )
+  }, [brandId])
   return (
     <main>
       <div className={classes.container}>
@@ -26,7 +32,8 @@ export const ItemListContainer = (props) => {
             variant="h2"
             align="center"
             color="textPrimary"
-            gutterBottom>
+            gutterBottom
+          >
             Nuestros Productos
           </Typography>
         </Container>

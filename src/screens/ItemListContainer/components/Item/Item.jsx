@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import { Card, CardContent, CardMedia, CardActions, Button } from '@material-ui/core'
 import Dotdotdot from 'react-dotdotdot'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ItemStyles(theme))
 
@@ -38,7 +39,7 @@ export const Item = props => {
                 {props.description}
                 </Typography></Dotdotdot>
               <CardActions className={classes.cardActions}>
-              <Button size="small" variant="outlined"color="primary">Detalles</Button>
+              <Button size="small" variant="outlined"color="primary" component={Link} to={`/item/${props.id}`}>Detalles</Button>
               <Button size="small" variant="contained" color="primary">Comprar</Button>
               </CardActions>
             </CardContent>

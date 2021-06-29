@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from 'react'
 import { ItemDetail } from './components/ItemDetail/ItemDetail'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Container } from '@material-ui/core'
 import { ItemsAPI } from '../../services/ItemsAPI'
+import { useParams } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,31 +14,33 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export const ItemDetailContainer = () => {
+export const ItemDetailContainer = props => {
   const classes = useStyles()
-  const [items, setItem] = useState([])
+  const [detailItem, setDetailItem] = useState([])
+  const { ItemId } = useParams()
   useEffect(() => {
-    ItemsAPI.then((itemsData) => {
-      const filteredItems = itemsData.filter((element) =>
-        element.id.includes('36ti')
-      )
-      setItem(filteredItems)
-    })
-  }, [])
-  return (
-    <main>
+    ItemsAPI()
+      .then((response) => {
+        console.log(response)
+        setDetailItem(response.filter(element => element.id === parseInt(ItemId))
+        )
+      })
+  }, [ItemId])
+  return <main>
       <div className={classes.container}>
         <Container maxWidth="sm">
           <Typography
             variant="h2"
             align="center"
             color="textPrimary"
-            gutterBottom>
+            gutterBottom
+          >
             Detalle del Producto
           </Typography>
         </Container>
       </div>
-      <ItemDetail items={items} />
+      {detailItem.map((detail) => (
+        <ItemDetail detailItem={detail} />
+      ))}
     </main>
-  )
 }

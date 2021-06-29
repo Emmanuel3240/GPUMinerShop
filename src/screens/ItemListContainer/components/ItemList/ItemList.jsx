@@ -19,13 +19,12 @@ const useStyles = makeStyles((theme) => ({
 
 export const ItemList = props => {
   const classes = useStyles()
-  const producto = props.items.map((item, i) => {
-    return <Item key={i} {...item} />
-  })
-  return (
-  <Container className={classes.cardGrid} maxWidth="md">
-    <Grid container spacing ={4}>
-    { producto }
-    </Grid>
-  </Container>)
+  const { items } = props
+  return <Container className={classes.cardGrid} maxWidth="md">
+      <Grid container spacing={4}>
+        {items.map((item, i) =>
+          <Item key={i} {...item} />
+        )}
+      </Grid>
+    </Container>
 }

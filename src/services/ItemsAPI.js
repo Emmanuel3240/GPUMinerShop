@@ -5,7 +5,7 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1499,
   picture: {
-    pictureUrl: 'https://acortar.link/hV0Kv',
+    pictureUrl: 'https://acortar.link/C4iz8',
     alt: 'RTX3090'
   },
   ethash: 114,
@@ -18,8 +18,8 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1199,
   picture: {
-    pictureUrl: 'https://acortar.link/BExys',
-    alt: 'RTX3090'
+    pictureUrl: 'https://acortar.link/XKcrr',
+    alt: 'RTX3080'
   },
   ethash: 91.5,
   stock: 100
@@ -31,7 +31,7 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/zUAw4',
+    pictureUrl: 'https://acortar.link/r80AF',
     alt: 'RTX3070'
   },
   ethash: 58.1,
@@ -44,7 +44,7 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 599,
   picture: {
-    pictureUrl: 'https://acortar.link/azYFo',
+    pictureUrl: 'https://acortar.link/JLMN4',
     alt: 'RTX3060Ti'
   },
   ethash: 58.1,
@@ -57,7 +57,7 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/UGhAH',
+    pictureUrl: 'https://acortar.link/QuYal',
     alt: '6800XT'
   },
   ethash: 64,
@@ -70,7 +70,7 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/EjIO0',
+    pictureUrl: 'https://acortar.link/gdgRy',
     alt: '6700XT'
   },
   ethash: 48,
@@ -83,7 +83,7 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/yVAFs',
+    pictureUrl: 'https://acortar.link/xSOxc',
     alt: '5700XT'
   },
   ethash: 55,
@@ -96,13 +96,15 @@ const items = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
   picture: {
-    pictureUrl: 'https://acortar.link/c2aLH',
+    pictureUrl: 'https://acortar.link/bqUOi',
     alt: '5600XT'
   },
   ethash: 40.5,
   stock: 100
 }]
 
-export const ItemsAPI = new Promise((resolve, reject) => {
-  setTimeout(() => resolve(items), 2000)
-})
+export const ItemsAPI = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(items), 500)
+  })
+}
