@@ -1,16 +1,17 @@
 Este proyecto tiene intalado las siguientes dependencias NPM:
 
 gpuminershop-lagneau@0.1.0 D:\Coder\React JS\gpuminershop-lagneau
-Material UI
 
-Axios
+- Material UI
 
-Cors
+- Axios
 
-Eslint
+- Cors
 
-Express
+- Eslint
 
-react-dotdotdot
+- Express
 
-react-router-dom
+- react-dotdotdot
+
+- react-router-dom
