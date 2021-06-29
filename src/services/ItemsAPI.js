@@ -1,6 +1,6 @@
 const items = [{
   id: '39',
-  brand: 'nvidia',
+  brand: 'NVIDIA',
   title: 'Geforce RTX 3090',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1499,
@@ -13,7 +13,7 @@ const items = [{
 },
 {
   id: '38',
-  brand: 'nvidia',
+  brand: 'NVIDIA',
   title: 'Geforce RTX 3080',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 1199,
@@ -26,7 +26,7 @@ const items = [{
 },
 {
   id: '37',
-  brand: 'nvidia',
+  brand: 'NVIDIA',
   title: 'Geforce RTX 3070',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
@@ -39,7 +39,7 @@ const items = [{
 },
 {
   id: '36ti',
-  brand: 'nvidia',
+  brand: 'NVIDIA',
   title: 'Geforce RTX 3060Ti',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 599,
@@ -52,7 +52,7 @@ const items = [{
 },
 {
   id: '68xt',
-  brand: 'amd',
+  brand: 'AMD',
   title: 'Radeon RX 6800 XT',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
@@ -65,7 +65,7 @@ const items = [{
 },
 {
   id: '67xt',
-  brand: 'amd',
+  brand: 'AMD',
   title: 'Radeon RX 6700 XT',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
@@ -78,7 +78,7 @@ const items = [{
 },
 {
   id: '57xt',
-  brand: 'amd',
+  brand: 'AMD',
   title: 'Radeon RX 5700 XT',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
@@ -91,7 +91,7 @@ const items = [{
 },
 {
   id: '56xt',
-  brand: 'amd',
+  brand: 'AMD',
   title: 'Radeon RX 5600 XT',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus et esse culpa minus vel laboriosam optio quam temporibus quis ipsa tempore voluptas, dolore, laudantium, iusto sapiente distinctio suscipit facere?',
   price: 799,
@@ -105,6 +105,6 @@ const items = [{
 
 export const ItemsAPI = () => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(items), 500)
+    setTimeout(() => resolve(items))
   })
 }

@@ -13,19 +13,19 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
   const classes = useStyles()
   const [items, setItems] = useState([])
   const { brandId } = useParams()
+  console.log(brandId)
   useEffect(() => {
     ItemsAPI().then((response) =>
       brandId === undefined
         ? setItems(response)
-        : setItems(response.filter((element) => element.category === brandId))
+        : setItems(response.filter(item => item.brand === brandId))
     )
   }, [brandId])
-  return (
-    <main>
+  return <main>
       <div className={classes.container}>
         <Container maxWidth="sm">
           <Typography
@@ -40,5 +40,4 @@ export const ItemListContainer = (props) => {
       </div>
       <ItemList items={items} />
     </main>
-  )
 }

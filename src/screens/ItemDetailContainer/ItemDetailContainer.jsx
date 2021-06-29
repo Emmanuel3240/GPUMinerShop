@@ -14,18 +14,19 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export const ItemDetailContainer = props => {
+export const ItemDetailContainer = () => {
   const classes = useStyles()
   const [detailItem, setDetailItem] = useState([])
-  const { ItemId } = useParams()
+  const { itemId } = useParams()
+  console.log(itemId)
   useEffect(() => {
-    ItemsAPI()
-      .then((response) => {
-        console.log(response)
-        setDetailItem(response.filter(element => element.id === parseInt(ItemId))
-        )
-      })
-  }, [ItemId])
+    ItemsAPI().then((response) => {
+      console.log(response)
+      setDetailItem(response.filter(item => item.id.includes(itemId))
+      )
+    })
+  }, [itemId])
+  console.log(detailItem)
   return <main>
       <div className={classes.container}>
         <Container maxWidth="sm">
@@ -39,8 +40,6 @@ export const ItemDetailContainer = props => {
           </Typography>
         </Container>
       </div>
-      {detailItem.map((detail) => (
-        <ItemDetail detailItem={detail} />
-      ))}
+      {detailItem.map((detail, i) => (<ItemDetail key={i} {...detail} />))}
     </main>
 }
