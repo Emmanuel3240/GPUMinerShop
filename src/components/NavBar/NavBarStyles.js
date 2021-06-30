@@ -4,7 +4,7 @@ export const NavBarStyles = theme => {
       ...theme.mixins.toolbar,
       marginBottom: '1rem'
     },
-    menuButton: {
+    homeButton: {
       marginRight: theme.spacing(2)
     },
     title: {

@@ -47,7 +47,6 @@ export const Item = props => {
                 </Typography></Dotdotdot>
               <CardActions className={classes.cardActions}>
               <Button size="small" variant="outlined" color="primary" component={Link} to={`/item/${props.id}`}>Detalles</Button>
-              <Button size="small" variant="contained" color="primary">Comprar</Button>
               </CardActions>
             </CardContent>
           </Card>

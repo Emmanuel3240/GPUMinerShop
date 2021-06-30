@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, IconButton, Button } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
+import HomeIcon from '@material-ui/icons/Home'
 import { NavBarStyles } from './NavBarStyles'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
@@ -20,12 +20,12 @@ export const NavBar = () => {
         <Toolbar>
           <IconButton
             edge="start"
-            className={classes.menuButton}
+            className={classes.homeButton}
             color="inherit"
             component={Link}
             to={'/'}
           >
-            <MenuIcon />
+            <HomeIcon />
           </IconButton>
           <Button
           variant="text"
