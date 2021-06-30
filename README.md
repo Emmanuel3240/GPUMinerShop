@@ -1,4 +1,4 @@
-Este proyecto tiene intalado las siguientes dependencias NPM:
+Este proyecto tiene instalado las siguientes dependencias NPM:
 
 - Material UI
 
