@@ -13,3 +13,5 @@ Este proyecto tiene intalado las siguientes dependencias NPM:
 - react-dotdotdot
 
 - react-router-dom
+
+-firebase
