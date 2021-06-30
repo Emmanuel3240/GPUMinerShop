@@ -1,4 +1,4 @@
-Este proyecto tiene intalado las siguientes dependencias NPM:
+Este proyecto tiene instalado las siguientes dependencias NPM:
 
 - Material UI
 
@@ -13,3 +13,5 @@ Este proyecto tiene intalado las siguientes dependencias NPM:
 - react-dotdotdot
 
 - react-router-dom
+
+- firebase
