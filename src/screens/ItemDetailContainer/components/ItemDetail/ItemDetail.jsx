@@ -19,9 +19,9 @@ const getbrandColor = brand => itemBrand[brand]
 
 export const ItemDetail = props => {
   const classes = useStyles()
-  return <Container className={classes.cardGrid} maxWidth="md">
-    <Grid container spacing ={4}>
-    <Grid item xs={12} sm={12} md={12}>
+  return <Container className={classes.cardGrid} maxWidth="xs">
+    <Grid>
+    <Grid item xs={12}>
           <Card className={classes.card}>
             <CardMedia
             component='img'
@@ -53,6 +53,6 @@ export const ItemDetail = props => {
             </CardContent>
           </Card>
         </Grid>
-    </Grid>
+        </Grid>
   </Container>
 }

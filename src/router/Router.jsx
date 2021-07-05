@@ -4,6 +4,7 @@ import { ItemListContainer } from '../screens/ItemListContainer/ItemListContaine
 import { ItemDetailContainer } from '../screens/ItemDetailContainer/ItemDetailContainer'
 import { NavBar } from '../components/NavBar/NavBar'
 import { Cart } from '../screens/Cart/Cart'
+import { Counter } from '../components/Counter/Counter'
 
 export const Router = () => {
   return <BrowserRouter>
@@ -20,6 +21,9 @@ export const Router = () => {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/counter">
+          <Counter />
         </Route>
       </Switch>
     </BrowserRouter>

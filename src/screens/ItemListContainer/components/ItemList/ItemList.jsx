@@ -8,12 +8,6 @@ import { Container } from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
     padding: '5px 0'
-  },
-  root: {
-    display: 'flex',
-    '& > * + *': {
-      marginLeft: theme.spacing(2)
-    }
   }
 }))
 
