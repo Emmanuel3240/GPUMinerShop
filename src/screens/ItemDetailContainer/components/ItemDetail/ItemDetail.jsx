@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import { ItemDetailStyles } from './ItemDetailStyles'
@@ -8,6 +8,7 @@ import Divider from '@material-ui/core/Divider'
 import { Container, Card, CardContent, CardMedia, CardActions, Chip } from '@material-ui/core'
 import { PurchaseButtons } from '../../../../components/PurchaseButtons/PurchaseButtons'
 import { ItemCount } from '../../../../components/ItemCount/ItemCount'
+import { CartContext } from '../../../../context/CartContext'
 
 const useStyles = makeStyles((theme) => ItemDetailStyles(theme))
 
@@ -22,14 +23,17 @@ export const ItemDetail = props => {
   const classes = useStyles()
   const [stockItem, setStockItem] = useState(0)
   const [click, setClick] = useState(false)
+  const { addItem, removeItem } = useContext(CartContext)
 
   const onAdd = cantidad => {
     setStockItem(cantidad)
     setClick(true)
+    addItem({ item: props, quantity: cantidad })
   }
 
   const clickCancelar = cl => {
     setClick(false)
+    removeItem(props.id)
   }
   return <Container className={classes.cardGrid} maxWidth="xs">
     <Grid item xs={12}>
