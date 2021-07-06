@@ -1,19 +1,17 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import { IconButton, Typography, Button } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import { counterStyles } from './CounterStyles'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
+import { Link } from 'react-router-dom'
 
-const useStyle = makeStyles((theme) => counterStyles(theme))
-
-export const Counter = props => {
+export const Counter = (props) => {
   const { stock, valorInicial, cantidadProducto, onAdd } = props
 
-  const classes = useStyle()
-  const [count, setCount] = useState(valorInicial > cantidadProducto ? valorInicial : cantidadProducto)
+  const [count, setCount] = useState(
+    valorInicial > cantidadProducto ? valorInicial : cantidadProducto
+  )
 
   const handleChangeCount = () => {
     setCount(count + 1)
@@ -22,30 +20,31 @@ export const Counter = props => {
     setCount(count - 1)
   }
 
-  return <div className={classes.generalContainer}>
-        <div className={classes.container}>
-            <Typography variant="h4" className={classes.counter}>{count}</Typography>
-            <div className={classes.buttonsContainer}>
-                <IconButton className={classes.counterButtons} onClick={e => handleChangeCount()} disabled={!(count < stock)}>
-                    <AddCircleOutlineIcon/>
-                </IconButton>
-                <IconButton className={classes.counterButtons} onClick={e => handleChangeDiscount()} disabled={count === valorInicial}>
-                    <RemoveCircleOutlineIcon/>
-                </IconButton>
-            </div>
-        </div>
-        <div>
-            <div className={classes.container}>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    startIcon={<AddShoppingCartIcon/>}
-                    onClick={() => onAdd(count)}
-                    disabled={stock === 0}
-                >
-                    Agregar al carrito
-                </Button>
-            </div>
-        </div>
-    </div>
+  return <>
+    <Button variant="outlined" color="primary" component={Link} to={'/'}>
+        Volver
+    </Button>
+    <IconButton
+        onClick={(e) => handleChangeDiscount()}
+        disabled={count === valorInicial}
+    >
+        <RemoveCircleOutlineIcon />
+    </IconButton>
+    <Typography variant="h5">{count}</Typography>
+    <IconButton
+        onClick={(e) => handleChangeCount()}
+        disabled={!(count < stock)}
+    >
+        <AddCircleOutlineIcon />
+    </IconButton>
+    <Button
+        variant="contained"
+        color="primary"
+        startIcon={<AddShoppingCartIcon />}
+        onClick={() => onAdd(count)}
+        disabled={stock === 0}
+    >
+        Agregar
+    </Button>
+</>
 }

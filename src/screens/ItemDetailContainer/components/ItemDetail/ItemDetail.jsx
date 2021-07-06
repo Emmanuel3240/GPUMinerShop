@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import { ItemDetailStyles } from './ItemDetailStyles'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
-import { Container, Card, CardContent, CardMedia, CardActions, Button, Chip } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Container, Card, CardContent, CardMedia, CardActions, Chip } from '@material-ui/core'
+import { PurchaseButtons } from '../../../../components/PurchaseButtons/PurchaseButtons'
+import { Counter } from '../../../../components/Counter/Counter'
 
 const useStyles = makeStyles((theme) => ItemDetailStyles(theme))
 
@@ -19,8 +20,18 @@ const getbrandColor = brand => itemBrand[brand]
 
 export const ItemDetail = props => {
   const classes = useStyles()
+  const [stockItem, setStockItem] = useState(0)
+  const [click, setClick] = useState(false)
+
+  const onAdd = cantidad => {
+    setStockItem(cantidad)
+    setClick(true)
+  }
+
+  const clickCancelar = cl => {
+    setClick(false)
+  }
   return <Container className={classes.cardGrid} maxWidth="xs">
-    <Grid>
     <Grid item xs={12}>
           <Card className={classes.card}>
             <CardMedia
@@ -47,12 +58,14 @@ export const ItemDetail = props => {
                 {props.description}
                 </Typography>
               <CardActions className={classes.cardActions}>
-              <Button size="small" variant="outlined" color="primary" component={Link} to={'/'}>Volver</Button>
-              <Button size="small" variant="contained" color="primary">Comprar</Button>
+              {
+                    click
+                      ? <PurchaseButtons clickCancelar={clickCancelar}/>
+                      : <Counter stock={props.stock} valorInicial={1} cantidadProducto={stockItem} onAdd={onAdd}/>
+                }
               </CardActions>
             </CardContent>
           </Card>
-        </Grid>
         </Grid>
   </Container>
 }

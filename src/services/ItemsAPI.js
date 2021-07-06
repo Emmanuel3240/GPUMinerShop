@@ -9,7 +9,7 @@ const items = [{
     alt: 'RTX3090'
   },
   ethash: 114,
-  stock: 100
+  stock: 1
 },
 {
   id: '38',
@@ -22,7 +22,7 @@ const items = [{
     alt: 'RTX3080'
   },
   ethash: 91.5,
-  stock: 100
+  stock: 2
 },
 {
   id: '37',
@@ -35,7 +35,7 @@ const items = [{
     alt: 'RTX3070'
   },
   ethash: 58.1,
-  stock: 100
+  stock: 3
 },
 {
   id: '36ti',
@@ -48,7 +48,7 @@ const items = [{
     alt: 'RTX3060Ti'
   },
   ethash: 58.1,
-  stock: 100
+  stock: 4
 },
 {
   id: '68xt',
@@ -61,7 +61,7 @@ const items = [{
     alt: '6800XT'
   },
   ethash: 64,
-  stock: 100
+  stock: 5
 },
 {
   id: '67xt',
@@ -74,7 +74,7 @@ const items = [{
     alt: '6700XT'
   },
   ethash: 48,
-  stock: 100
+  stock: 6
 },
 {
   id: '57xt',
@@ -87,7 +87,7 @@ const items = [{
     alt: '5700XT'
   },
   ethash: 55,
-  stock: 100
+  stock: 7
 },
 {
   id: '56xt',
@@ -100,7 +100,7 @@ const items = [{
     alt: '5600XT'
   },
   ethash: 40.5,
-  stock: 100
+  stock: 8
 }]
 
 export const ItemsAPI = () => {

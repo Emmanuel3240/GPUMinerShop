@@ -14,8 +14,7 @@ export const NavBar = () => {
   const classes = useStyles()
   const nvidia = 'NVIDIA'
   const amd = 'AMD'
-  return (
-    <>
+  return <>
       <AppBar position="fixed" color="primary">
         <Toolbar>
           <IconButton
@@ -48,6 +47,5 @@ export const NavBar = () => {
         </Toolbar>
       </AppBar>
       <div className={classes.offset}></div>
-    </>
-  )
+</>
 }

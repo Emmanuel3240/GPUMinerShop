@@ -18,15 +18,12 @@ export const ItemDetailContainer = () => {
   const classes = useStyles()
   const [detailItem, setDetailItem] = useState([])
   const { itemId } = useParams()
-  console.log(itemId)
   useEffect(() => {
     ItemsAPI().then((response) => {
-      console.log(response)
       setDetailItem(response.filter(item => item.id.includes(itemId))
       )
     })
   }, [itemId])
-  console.log(detailItem)
   return <main>
       <div className={classes.container}>
         <Container maxWidth="sm">

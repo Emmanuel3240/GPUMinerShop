@@ -17,7 +17,6 @@ export const ItemListContainer = () => {
   const classes = useStyles()
   const [items, setItems] = useState([])
   const { brandId } = useParams()
-  console.log(brandId)
   useEffect(() => {
     ItemsAPI().then((response) =>
       brandId === undefined
