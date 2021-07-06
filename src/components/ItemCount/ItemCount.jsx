@@ -6,7 +6,7 @@ import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import { Link } from 'react-router-dom'
 
-export const Counter = (props) => {
+export const ItemCount = (props) => {
   const { stock, valorInicial, cantidadProducto, onAdd } = props
 
   const [count, setCount] = useState(

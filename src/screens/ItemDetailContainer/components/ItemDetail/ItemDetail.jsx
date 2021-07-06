@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import { Container, Card, CardContent, CardMedia, CardActions, Chip } from '@material-ui/core'
 import { PurchaseButtons } from '../../../../components/PurchaseButtons/PurchaseButtons'
-import { Counter } from '../../../../components/Counter/Counter'
+import { ItemCount } from '../../../../components/ItemCount/ItemCount'
 
 const useStyles = makeStyles((theme) => ItemDetailStyles(theme))
 
@@ -61,7 +61,7 @@ export const ItemDetail = props => {
               {
                     click
                       ? <PurchaseButtons clickCancelar={clickCancelar}/>
-                      : <Counter stock={props.stock} valorInicial={1} cantidadProducto={stockItem} onAdd={onAdd}/>
+                      : <ItemCount stock={props.stock} valorInicial={1} cantidadProducto={stockItem} onAdd={onAdd}/>
                 }
               </CardActions>
             </CardContent>
