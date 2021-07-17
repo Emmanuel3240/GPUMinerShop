@@ -5,21 +5,15 @@ export const CartContext = createContext([])
 
 export const ContextProvider = props => {
   const [itemsCart, setItemsCart] = useState([])
-
-  const IsInCart = itemId => {
-    itemsCart.find(itemCart => itemCart.item.id === itemId)
-  }
+  const [itemsCant, setItemsCant] = useState(0)
 
   const addItem = addedItem => {
-    if (IsInCart(addedItem.item.id)) {
-      const actualizarItem = itemsCart.map((itemCart) => {
-        const cantidadTotal = itemCart.quantity + addedItem.quantity
-        if (itemCart.item.id === addedItem.item.id) {
-          return { ...itemCart, quantity: cantidadTotal }
-        }
-        return itemCart
-      })
-      setItemsCart(actualizarItem)
+    setItemsCant(itemsCant + addedItem.quantity)
+    const item = itemsCart.find(itemCart => itemCart.item.id === addedItem.item.id)
+    if (item) {
+      const actualizarItem = item.quantity + addedItem.quantity
+      item.quantity = actualizarItem
+      setItemsCart(itemsCart)
     } else {
       setItemsCart(addedItems => [...addedItems, addedItem])
     }
@@ -27,9 +21,12 @@ export const ContextProvider = props => {
 
   const clear = () => {
     setItemsCart([])
+    setItemsCant(0)
   }
 
   const removeItem = id => {
+    const selectRemoveItem = itemsCart.find(itemCart => itemCart.item.id === id)
+    setItemsCant(itemsCant - selectRemoveItem.quantity)
     setItemsCart(itemsCart.filter((item) => item.item.id !== id))
   }
 
@@ -37,7 +34,7 @@ export const ContextProvider = props => {
     console.log('Carrito Actualizado:', itemsCart)
   }, [itemsCart])
 
-  return <CartContext.Provider value={{ itemsCart, addItem, clear, removeItem }}>
+  return <CartContext.Provider value={{ itemsCart, addItem, clear, removeItem, itemsCant }}>
         {props.children}
     </CartContext.Provider>
 }

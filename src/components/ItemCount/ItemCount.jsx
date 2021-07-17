@@ -6,11 +6,11 @@ import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import { Link } from 'react-router-dom'
 
-export const ItemCount = (props) => {
-  const { stock, valorInicial, cantidadProducto, onAdd } = props
+export const ItemCount = props => {
+  const { stock, valorInicial, itemsCant, onAdd } = props
 
   const [count, setCount] = useState(
-    valorInicial > cantidadProducto ? valorInicial : cantidadProducto
+    valorInicial > itemsCant ? valorInicial : itemsCant
   )
 
   const handleChangeCount = () => {
@@ -25,14 +25,14 @@ export const ItemCount = (props) => {
         Volver
     </Button>
     <IconButton
-        onClick={(e) => handleChangeDiscount()}
+        onClick={e => handleChangeDiscount()}
         disabled={count === valorInicial}
     >
         <RemoveCircleOutlineIcon />
     </IconButton>
     <Typography variant="h5">{count}</Typography>
     <IconButton
-        onClick={(e) => handleChangeCount()}
+        onClick={e => handleChangeCount()}
         disabled={!(count < stock)}
     >
         <AddCircleOutlineIcon />

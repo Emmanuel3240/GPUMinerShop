@@ -65,7 +65,7 @@ export const ItemDetail = props => {
               {
                     click
                       ? <PurchaseButtons clickCancelar={clickCancelar}/>
-                      : <ItemCount stock={props.stock} valorInicial={1} cantidadProducto={stockItem} onAdd={onAdd}/>
+                      : <ItemCount stock={props.stock} valorInicial={1} itemsCant={stockItem} onAdd={onAdd}/>
                 }
               </CardActions>
             </CardContent>
