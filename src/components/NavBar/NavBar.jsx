@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -7,11 +7,13 @@ import HomeIcon from '@material-ui/icons/Home'
 import { NavBarStyles } from './NavBarStyles'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
 const useStyles = makeStyles((theme) => NavBarStyles(theme))
 
 export const NavBar = () => {
   const classes = useStyles()
+  const { itemsCart } = useContext(CartContext)
   const nvidia = 'NVIDIA'
   const amd = 'AMD'
   return <>
@@ -43,7 +45,7 @@ export const NavBar = () => {
           <Typography align="center" variant="h6" className={classes.title}>
             GPUMinerShop
           </Typography>
-          <CartWidget />
+          { itemsCart.length > 0 ? <CartWidget /> : ''}
         </Toolbar>
       </AppBar>
       <div className={classes.offset}></div>

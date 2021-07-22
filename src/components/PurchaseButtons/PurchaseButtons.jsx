@@ -7,6 +7,6 @@ export const PurchaseButtons = props => {
   const history = useHistory()
   return <>
   <Button variant="outlined" color="primary" onClick={() => props.clickCancelar(false)}>Cancelar</Button>
-  <Button variant="contained" color="primary" onClick={() => history.push('/cart')}>Terminar Compra</Button>
+  <Button variant="contained" color="primary" onClick={() => history.push('/cart')}>Ver Carrito</Button>
 </>
 }
