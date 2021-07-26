@@ -7,6 +7,7 @@ export const ContextProvider = props => {
   const [itemsCart, setItemsCart] = useState([])
   const [itemsCant, setItemsCant] = useState(0)
   const [subTotal, setSubTotal] = useState(0)
+  const [orderData, setOrderData] = useState('')
 
   const addItem = addedItem => {
     setItemsCant(itemsCant + addedItem.quantity)
@@ -34,7 +35,11 @@ export const ContextProvider = props => {
     setItemsCart(itemsCart.filter((item) => item.item.id !== id))
   }
 
-  return <CartContext.Provider value={{ itemsCart, addItem, clear, removeItem, itemsCant, subTotal }}>
+  const updateOrderData = id => {
+    setOrderData(id)
+  }
+
+  return <CartContext.Provider value={{ itemsCart, addItem, clear, removeItem, itemsCant, subTotal, orderData, updateOrderData }}>
         {props.children}
     </CartContext.Provider>
 }

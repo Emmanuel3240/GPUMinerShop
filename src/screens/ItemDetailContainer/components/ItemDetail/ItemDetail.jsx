@@ -54,7 +54,7 @@ export const ItemDetail = props => {
                 ID: {props.id}
               </Typography>
               <Typography variant="h6" display="block" gutterBottom>
-                u$s {props.price}
+                $ {props.price}
               </Typography>
               </div>
               <Divider variant="middle" />
@@ -65,7 +65,7 @@ export const ItemDetail = props => {
               {
                     click
                       ? <PurchaseButtons clickCancelar={clickCancelar}/>
-                      : <ItemCount stock={props.stock} valorInicial={props.stock} itemsCant={stockItem} onAdd={onAdd}/>
+                      : <ItemCount stock={props.stock} valorInicial={props.stock === 0 ? 0 : 1 } itemsCant={stockItem} onAdd={onAdd}/>
                 }
               </CardActions>
             </CardContent>

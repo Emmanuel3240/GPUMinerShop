@@ -38,7 +38,7 @@ export const Item = props => {
                 ID: {props.id}
               </Typography>
               <Typography variant="h6" display="block" gutterBottom>
-                u$s {props.data.price}
+                $ {props.data.price}
               </Typography>
               </div>
               <Divider variant="middle" />

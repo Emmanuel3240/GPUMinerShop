@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Card, CardContent, TextField, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import { CartContext } from '../../../context/CartContext'
+import { dataBase } from '../../../firebase/Firebase'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
 
 const useStyles = makeStyles((theme) => ({
   cardContainer: {
@@ -22,7 +26,10 @@ const useStyles = makeStyles((theme) => ({
 
 export const FinalizarCompra = (props) => {
   const classes = useStyles()
+  const { itemsCart, subTotal, updateOrderData } = useContext(CartContext)
   const [buyerData, setBuyerData] = useState({})
+  const [, setOutOfStock] = useState([])
+  const [, setShowForm] = useState(true)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -31,7 +38,60 @@ export const FinalizarCompra = (props) => {
 
   const submitForm = (event) => {
     event.preventDefault()
-    props.addOrder(buyerData)
+    addOrderUpdateItems(buyerData)
+  }
+
+  const itemsToUpdate = dataBase.collection('items').where(
+    firebase.firestore.FieldPath.documentId(),
+    'in',
+    itemsCart.map((i) => i.item.id)
+  )
+
+  const createOrder = (buyer) => {
+    const newOrder = {
+      buyer: buyer,
+      items: itemsCart,
+      date: new Date(),
+      total: subTotal
+    }
+    return newOrder
+  }
+
+  const addNewOrder = (buyer) => {
+    const newOrder = createOrder(buyer)
+    const orders = dataBase.collection('orders')
+    try {
+      orders.add(newOrder).then((doc) => {
+        setShowForm(false)
+        updateOrderData(doc.id)
+      })
+    } catch (error) {
+      console.log('Firebase add doc error:', error)
+    }
+  }
+
+  const addOrderUpdateItems = (buyer) => {
+    itemsToUpdate.get().then((querySnapshot) => {
+      const batch = dataBase.batch()
+      const outOfStock = []
+      querySnapshot.docs.forEach((docSnapshot, idx) => {
+        if (docSnapshot.data().stock >= itemsCart[idx].quantity) {
+          batch.update(docSnapshot.ref, {
+            stock: docSnapshot.data().stock - itemsCart[idx].quantity
+          })
+        } else {
+          outOfStock.push({ ...docSnapshot.data(), id: docSnapshot.id })
+        }
+      })
+
+      if (outOfStock.length === 0) {
+        batch.commit().then(() => {
+          addNewOrder(buyer)
+        })
+      } else {
+        setOutOfStock(outOfStock)
+      }
+    })
   }
 
   return (
@@ -83,6 +143,7 @@ export const FinalizarCompra = (props) => {
             fullWidth
             label="Email"
             name="email"
+            type="email"
             required
             onChange={handleChange}
           />
