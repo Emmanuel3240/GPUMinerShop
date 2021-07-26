@@ -1,7 +1,7 @@
 export const ItemDetailStyles = (theme) => {
   return {
     cardGrid: {
-      padding: '5px 0'
+      padding: '1em 0'
     },
     root: {
       display: 'flex',

@@ -10,7 +10,7 @@ const StyledBadge = withStyles((theme) => ({
   badge: {
     right: -3,
     top: 5,
-    padding: '0 4px'
+    padding: '0 0.2em'
   }
 }))(Badge)
 
