@@ -25,25 +25,25 @@ export const Item = props => {
             <CardMedia
             component='img'
             className={classes.cardMedia}
-            image = {props.picture.pictureUrl}
-            title = {props.picture.alt}
+            image = {props.data.pictureUrl}
+            title = {props.data.alt}
             />
             <CardContent className={classes.cardContent}>
-              <Chip size="small" label= {props.brand} style={{ background: getbrandColor(props.brand) }}/>
+              <Chip size="small" label= {props.data.brand} style={{ background: getbrandColor(props.data.brand) }}/>
               <Typography variant="h5" gutterBottom>
-                {props.title}
+                {props.data.title}
               </Typography>
               <div className={classes.cardIdPrecio}>
               <Typography color="textSecondary" variant="subtitle2" gutterBottom>
                 ID: {props.id}
               </Typography>
               <Typography variant="h6" display="block" gutterBottom>
-                $ {props.price}
+                u$s {props.data.price}
               </Typography>
               </div>
               <Divider variant="middle" />
               <Dotdotdot clamp={3}><Typography variant="body2" display="block" paragraph>
-                {props.description}
+                {props.data.description}
                 </Typography></Dotdotdot>
               <CardActions className={classes.cardActions}>
               <Button size="small" variant="outlined" color="primary" component={Link} to={`/item/${props.id}`}>Detalles</Button>

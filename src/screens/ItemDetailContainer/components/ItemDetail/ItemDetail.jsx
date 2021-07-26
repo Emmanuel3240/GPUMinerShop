@@ -41,8 +41,8 @@ export const ItemDetail = props => {
             <CardMedia
             component='img'
             className={classes.cardMedia}
-            image = {props.picture.pictureUrl}
-            title = {props.picture.alt}
+            image = {props.pictureUrl}
+            title = {props.alt}
             />
             <CardContent className={classes.cardContent}>
             <Chip size="small" label= {props.brand} style={{ background: getbrandColor(props.brand) }}/>
@@ -54,7 +54,7 @@ export const ItemDetail = props => {
                 ID: {props.id}
               </Typography>
               <Typography variant="h6" display="block" gutterBottom>
-                $ {props.price}
+                u$s {props.price}
               </Typography>
               </div>
               <Divider variant="middle" />
@@ -65,7 +65,7 @@ export const ItemDetail = props => {
               {
                     click
                       ? <PurchaseButtons clickCancelar={clickCancelar}/>
-                      : <ItemCount stock={props.stock} valorInicial={1} itemsCant={stockItem} onAdd={onAdd}/>
+                      : <ItemCount stock={props.stock} valorInicial={props.stock} itemsCant={stockItem} onAdd={onAdd}/>
                 }
               </CardActions>
             </CardContent>
