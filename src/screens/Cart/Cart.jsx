@@ -7,8 +7,7 @@ import { FinalizarCompra } from './components/FinalizarCompra'
 
 export const Cart = () => {
   const { itemsCart, orderData } = useContext(CartContext)
-  return (
-    <>
+  return <>
       {itemsCart.length === 0
         ? (
         <CartVacio />
@@ -28,5 +27,4 @@ export const Cart = () => {
         </>
           )}
     </>
-  )
 }

@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { ItemList } from './components/ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { dataBase } from '../../firebase/Firebase'
+import Alerta from '../../components/Alerta/Alerta'
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([])
   const { brandId } = useParams()
+  const [error, setError] = useState(false)
   useEffect(() => {
+    setError(false)
     const itemCollection = dataBase.collection('items')
 
     if (brandId === undefined) {
@@ -14,7 +17,7 @@ export const ItemListContainer = () => {
         .get()
         .then((querySnapshot) => {
           if (querySnapshot.size === 0) {
-            console.log('No results')
+            setError(true)
           }
           setItems(
             querySnapshot.docs.map((doc) => ({
@@ -23,8 +26,9 @@ export const ItemListContainer = () => {
             }))
           )
         })
+        // eslint-disable-next-line node/handle-callback-err
         .catch((error) => {
-          console.log('Error:', error)
+          setError(true)
         })
     } else {
       itemCollection
@@ -32,7 +36,7 @@ export const ItemListContainer = () => {
         .get()
         .then((querySnapshot) => {
           if (querySnapshot.size === 0) {
-            console.log('No results')
+            setError(true)
           }
           setItems(
             querySnapshot.docs.map((doc) => ({
@@ -41,14 +45,18 @@ export const ItemListContainer = () => {
             }))
           )
         })
+        // eslint-disable-next-line node/handle-callback-err
         .catch((error) => {
-          console.log('Error:', error)
+          setError(true)
         })
     }
   }, [brandId])
   return (
     <>
-      <ItemList items={items} />
+    { error
+      ? <Alerta />
+      : <ItemList items={items} />
+    }
     </>
   )
 }

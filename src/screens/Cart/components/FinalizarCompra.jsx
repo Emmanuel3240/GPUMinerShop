@@ -6,6 +6,7 @@ import { CartContext } from '../../../context/CartContext'
 import { dataBase } from '../../../firebase/Firebase'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import Alerta from '../../../components/Alerta/Alerta'
 
 const useStyles = makeStyles((theme) => ({
   cardContainer: {
@@ -30,6 +31,7 @@ export const FinalizarCompra = (props) => {
   const [buyerData, setBuyerData] = useState({})
   const [, setOutOfStock] = useState([])
   const [, setShowForm] = useState(true)
+  const [error, setError] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -66,7 +68,7 @@ export const FinalizarCompra = (props) => {
         updateOrderData(doc.id)
       })
     } catch (error) {
-      console.log('Firebase add doc error:', error)
+      setError(true)
     }
   }
 
@@ -95,70 +97,77 @@ export const FinalizarCompra = (props) => {
   }
 
   return (
-    <Card variant="outlined" className={classes.cardContainer}>
-      <CardContent className={classes.cardContent}>
-        <form onSubmit={submitForm}>
-          <TextField
-            id="standard-full-width"
-            fullWidth
-            name="nombre"
-            label="Nombre"
-            required
-            onChange={handleChange}
-          />
-          <TextField
-            id="standard-full-width"
-            fullWidth
-            name="apellido"
-            label="Apellido"
-            required
-            onChange={handleChange}
-          />
-          <TextField
-            id="standard-full-width"
-            fullWidth
-            name="calle"
-            label="Calle"
-            required
-            onChange={handleChange}
-          />
-          <TextField
-            id="standard-full-width"
-            fullWidth
-            name="numero"
-            label="Número"
-            required
-            onChange={handleChange}
-          />
-          <TextField
-            id="standard-full-width"
-            fullWidth
-            name="telefono"
-            label="Teléfono"
-            required
-            onChange={handleChange}
-          />
-          <TextField
-            id="standard-full-width"
-            fullWidth
-            label="Email"
-            name="email"
-            type="email"
-            required
-            onChange={handleChange}
-          />
-          <div className={classes.container}>
-            <Button
-              variant="outlined"
-              color="primary"
-              type="submit"
-              className={classes.buttonAceptar}
-            >
-              ACEPTAR
-            </Button>
-          </div>
-        </form>
-      </CardContent>
-    </Card>
+    <>
+      {error
+        ? (
+        <Alerta />
+          )
+        : (
+        <Card variant="outlined" className={classes.cardContainer}>
+          <CardContent className={classes.cardContent}>
+            <form onSubmit={submitForm}>
+              <TextField
+                id="standard-full-width"
+                fullWidth
+                name="nombre"
+                label="Nombre"
+                required
+                onChange={handleChange}
+              />
+              <TextField
+                id="standard-full-width"
+                fullWidth
+                name="apellido"
+                label="Apellido"
+                required
+                onChange={handleChange}
+              />
+              <TextField
+                id="standard-full-width"
+                fullWidth
+                name="calle"
+                label="Calle"
+                required
+                onChange={handleChange}
+              />
+              <TextField
+                id="standard-full-width"
+                fullWidth
+                name="numero"
+                label="Número"
+                required
+                onChange={handleChange}
+              />
+              <TextField
+                id="standard-full-width"
+                fullWidth
+                name="telefono"
+                label="Teléfono"
+                required
+                onChange={handleChange}
+              />
+              <TextField
+                id="standard-full-width"
+                fullWidth
+                label="Email"
+                name="email"
+                type="email"
+                required
+                onChange={handleChange}
+              />
+              <div className={classes.container}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                >
+                  FINALIZAR COMPRA
+                </Button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
+          )}
+    </>
   )
 }
