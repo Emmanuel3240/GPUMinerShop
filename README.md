@@ -1,8 +1,8 @@
-Proyecto realizado en ReactJS utilizando [Create React App]
+Proyecto realizado en ReactJS utilizando [Create React App](https://es.reactjs.org/)
 
-Para el estilado se utilizó [Material UI]
+Para el estilado se utilizó [Material UI](https://material-ui.com/es/)
 
-[Ver Proyecto FUNCIONANDO]( ), siendo un ecommerce.
+[Ver Proyecto FUNCIONANDO](https://emmanuel3240.github.io/GPUMinerShop/), siendo un ecommerce.
 
 La temática del ecommerce es una tienda de placas de video destinadas a la mineria de Cryptomonedas Etherum.
 
