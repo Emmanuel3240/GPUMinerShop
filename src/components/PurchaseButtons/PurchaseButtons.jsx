@@ -6,7 +6,7 @@ import { Button } from '@material-ui/core'
 export const PurchaseButtons = props => {
   const history = useHistory()
   return <>
-  <Button variant="outlined" color="primary" onClick={() => props.clickCancelar(false)}>Cancelar</Button>
-  <Button variant="contained" color="primary" onClick={() => history.push('/cart')}>Ver Carrito</Button>
+  <Button variant="outlined" color="primary" onClick={() => props.clickCancelar(false)}>CANCELAR</Button>
+  <Button variant="contained" color="primary" onClick={() => history.push('/cart')}>COMPRAR</Button>
 </>
 }

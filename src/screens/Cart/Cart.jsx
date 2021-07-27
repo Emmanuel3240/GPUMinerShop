@@ -9,22 +9,16 @@ export const Cart = () => {
   const { itemsCart, orderData } = useContext(CartContext)
   return <>
       {itemsCart.length === 0
-        ? (
-        <CartVacio />
-          )
-        : (
-        <>
+        ? <CartVacio />
+        : <>
           {orderData
-            ? (
-            <Order />
-              )
-            : (
-            <>
+            ? <Order />
+            : <>
               <CartContent />
               <FinalizarCompra />
             </>
-              )}
+          }
         </>
-          )}
+      }
     </>
 }

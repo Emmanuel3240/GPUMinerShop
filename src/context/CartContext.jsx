@@ -22,10 +22,11 @@ export const ContextProvider = props => {
     }
   }
 
-  const clear = () => {
+  function clear () {
     setItemsCart([])
     setItemsCant(0)
     setSubTotal(0)
+    setOrderData('')
   }
 
   const removeItem = id => {

@@ -6,7 +6,7 @@ export const CartVacio = () => {
   return <Box textAlign="center">
       <Typography variant="h3">El carrito está vacio.</Typography>
         <Button variant="outlined" color="primary" component={Link} to={'/'}>
-          Volver
+          VOLVER
         </Button>
       </Box>
 }

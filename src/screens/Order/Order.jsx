@@ -7,7 +7,8 @@ import { Typography, Button } from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: '1em'
   }
 }))
 
@@ -26,7 +27,7 @@ export const Order = () => {
       <Typography align="center">Código de pedido: {orderData}</Typography>
       <div className={classes.container}>
       <Button variant="outlined" color="primary" onClick={goToIndex}>
-          Volver a comprar
+          SEGUIR COMPRANDO
       </Button>
       </div>
     </>

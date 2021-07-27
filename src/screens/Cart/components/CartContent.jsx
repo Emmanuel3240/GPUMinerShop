@@ -90,7 +90,7 @@ export const CartContent = () => {
       </div>
       <div className={classes.container}>
         <Button variant="outlined" color="primary" onClick={clear}>
-          Vaciar carrito
+          VACIAR CARRITO
         </Button>
       </div>
     </div>
