@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GPUMinerShop/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/GPUMinerShop/static/js/main.779e26ab.chunk.js",
-    "main.js.map": "/GPUMinerShop/static/js/main.779e26ab.chunk.js.map",
+    "main.js": "/GPUMinerShop/static/js/main.bd56ac23.chunk.js",
+    "main.js.map": "/GPUMinerShop/static/js/main.bd56ac23.chunk.js.map",
     "runtime-main.js": "/GPUMinerShop/static/js/runtime-main.d168288a.js",
     "runtime-main.js.map": "/GPUMinerShop/static/js/runtime-main.d168288a.js.map",
     "static/js/2.eaa834e0.chunk.js": "/GPUMinerShop/static/js/2.eaa834e0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.d168288a.js",
     "static/js/2.eaa834e0.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.779e26ab.chunk.js"
+    "static/js/main.bd56ac23.chunk.js"
   ]
 }
