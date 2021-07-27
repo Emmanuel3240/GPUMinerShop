@@ -96,14 +96,10 @@ export const FinalizarCompra = (props) => {
     })
   }
 
-  return (
-    <>
+  return <>
       {error
-        ? (
-        <Alerta />
-          )
-        : (
-        <Card variant="outlined" className={classes.cardContainer}>
+        ? <Alerta />
+        : <Card variant="outlined" className={classes.cardContainer}>
           <CardContent className={classes.cardContent}>
             <form onSubmit={submitForm}>
               <TextField
@@ -167,7 +163,6 @@ export const FinalizarCompra = (props) => {
             </form>
           </CardContent>
         </Card>
-          )}
+          }
     </>
-  )
 }
