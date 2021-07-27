@@ -3,7 +3,6 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, IconButton, Button } from '@material-ui/core'
-import HomeIcon from '@material-ui/icons/Home'
 import { NavBarStyles } from './NavBarStyles'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
@@ -26,7 +25,9 @@ export const NavBar = () => {
             component={Link}
             to={'/'}
           >
-            <HomeIcon />
+          <Typography align="center" variant="h1" className={classes.title}>
+            GPUMinerShop
+          </Typography>
           </IconButton>
           <Button
           variant="text"
@@ -42,9 +43,6 @@ export const NavBar = () => {
           to={`/brand/${amd}`}>
             AMD
           </Button>
-          <Typography align="center" variant="h6" className={classes.title}>
-            GPUMinerShop
-          </Typography>
           { itemsCart.length > 0 ? <CartWidget /> : ''}
         </Toolbar>
       </AppBar>

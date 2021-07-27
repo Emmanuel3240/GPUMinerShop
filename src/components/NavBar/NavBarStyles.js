@@ -8,7 +8,8 @@ export const NavBarStyles = theme => {
       marginRight: theme.spacing(2)
     },
     title: {
-      flexGrow: 1
+      flexGrow: 1,
+      fontFamily: 'Encode Sans SC'
     }
   })
 }

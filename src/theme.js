@@ -10,4 +10,14 @@ const theme = createMuiTheme({
   }
 })
 
+theme.typography.h1 = {
+  fontSize: '1rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.5rem'
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '2rem'
+  }
+}
+
 export default theme
