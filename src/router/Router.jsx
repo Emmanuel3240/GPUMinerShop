@@ -10,7 +10,7 @@ export const Router = () => {
   return <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <ItemListContainer />
         </Route>
         <Route path="/brand/:brandId">
