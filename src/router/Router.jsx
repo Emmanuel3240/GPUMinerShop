@@ -11,22 +11,22 @@ export const Router = () => {
   return <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path="/">
+        <Route path="GPUMinerShop/">
           <ItemListContainer />
         </Route>
-        <Route path="/brand/:brandId">
+        <Route path="GPUMinerShop//brand/:brandId">
           <ItemListContainer />
         </Route>
-        <Route path="/item/:itemId">
+        <Route path="GPUMinerShop//item/:itemId">
           <ItemDetailContainer />
         </Route>
-        <Route path="/cart">
+        <Route path="GPUMinerShop//cart">
           <Cart />
         </Route>
-        <Route path="/counter">
+        <Route path="GPUMinerShop//counter">
           <ItemCount />
         </Route>
-        <Route path="/*">
+        <Route path="GPUMinerShop//*">
           <Error />
         </Route>
       </Switch>
