@@ -23,7 +23,7 @@ export const NavBar = () => {
             className={classes.homeButton}
             color="inherit"
             component={Link}
-            to={'/'}
+            to={'/GPUMinerShop/'}
           >
           <Typography align="center" variant="h1" className={classes.title}>
             GPUMinerShop
