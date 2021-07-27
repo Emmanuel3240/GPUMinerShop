@@ -4,7 +4,6 @@ import { ItemListContainer } from '../screens/ItemListContainer/ItemListContaine
 import { ItemDetailContainer } from '../screens/ItemDetailContainer/ItemDetailContainer'
 import { NavBar } from '../components/NavBar/NavBar'
 import { Cart } from '../screens/Cart/Cart'
-import { ItemCount } from '../components/ItemCount/ItemCount'
 import { Error } from '../screens/Error/Error'
 
 export const Router = () => {
