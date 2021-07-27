@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/GPUMinerShop/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/GPUMinerShop/static/js/main.87ad997b.chunk.js",
-    "main.js.map": "/GPUMinerShop/static/js/main.87ad997b.chunk.js.map",
-    "runtime-main.js": "/GPUMinerShop/static/js/runtime-main.d168288a.js",
-    "runtime-main.js.map": "/GPUMinerShop/static/js/runtime-main.d168288a.js.map",
-    "static/js/2.eaa834e0.chunk.js": "/GPUMinerShop/static/js/2.eaa834e0.chunk.js",
-    "static/js/2.eaa834e0.chunk.js.map": "/GPUMinerShop/static/js/2.eaa834e0.chunk.js.map",
-    "index.html": "/GPUMinerShop/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/GPUMinerShop/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.eaa834e0.chunk.js.LICENSE.txt": "/GPUMinerShop/static/js/2.eaa834e0.chunk.js.LICENSE.txt"
+    "main.css": "/gpuminershop/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/gpuminershop/static/js/main.87ad997b.chunk.js",
+    "main.js.map": "/gpuminershop/static/js/main.87ad997b.chunk.js.map",
+    "runtime-main.js": "/gpuminershop/static/js/runtime-main.d8a487d5.js",
+    "runtime-main.js.map": "/gpuminershop/static/js/runtime-main.d8a487d5.js.map",
+    "static/js/2.0848d47f.chunk.js": "/gpuminershop/static/js/2.0848d47f.chunk.js",
+    "static/js/2.0848d47f.chunk.js.map": "/gpuminershop/static/js/2.0848d47f.chunk.js.map",
+    "index.html": "/gpuminershop/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/gpuminershop/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.0848d47f.chunk.js.LICENSE.txt": "/gpuminershop/static/js/2.0848d47f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d168288a.js",
-    "static/js/2.eaa834e0.chunk.js",
+    "static/js/runtime-main.d8a487d5.js",
+    "static/js/2.0848d47f.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
     "static/js/main.87ad997b.chunk.js"
   ]
