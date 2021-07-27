@@ -18,8 +18,8 @@ export const Order = () => {
   const classes = useStyles()
 
   const goToIndex = () => {
-    history.push('/')
     clear()
+    history.push('/')
   }
 
   return <>

@@ -26,7 +26,7 @@ export const ItemDetailContainer = () => {
       .catch((error) => {
         setError(true)
       })
-  }, [])
+  }, [itemId])
   return <>
     {
     error
