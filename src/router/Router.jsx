@@ -10,19 +10,19 @@ export const Router = () => {
   return <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path="GPUMinerShop/">
+        <Route path="/">
           <ItemListContainer />
         </Route>
-        <Route path="GPUMinerShop/brand/:brandId">
+        <Route path="/brand/:brandId">
           <ItemListContainer />
         </Route>
-        <Route path="GPUMinerShop/item/:itemId">
+        <Route path="/item/:itemId">
           <ItemDetailContainer />
         </Route>
-        <Route path="GPUMinerShop/cart">
+        <Route path="/cart">
           <Cart />
         </Route>
-        <Route path="GPUMinerShop/*">
+        <Route path="/*">
           <Error />
         </Route>
       </Switch>
