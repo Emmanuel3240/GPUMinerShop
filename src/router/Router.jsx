@@ -14,19 +14,19 @@ export const Router = () => {
         <Route path="GPUMinerShop/">
           <ItemListContainer />
         </Route>
-        <Route path="GPUMinerShop//brand/:brandId">
+        <Route path="GPUMinerShop/brand/:brandId">
           <ItemListContainer />
         </Route>
-        <Route path="GPUMinerShop//item/:itemId">
+        <Route path="GPUMinerShop/item/:itemId">
           <ItemDetailContainer />
         </Route>
-        <Route path="GPUMinerShop//cart">
+        <Route path="GPUMinerShop/cart">
           <Cart />
         </Route>
-        <Route path="GPUMinerShop//counter">
+        <Route path="GPUMinerShop/counter">
           <ItemCount />
         </Route>
-        <Route path="GPUMinerShop//*">
+        <Route path="GPUMinerShop/*">
           <Error />
         </Route>
       </Switch>
