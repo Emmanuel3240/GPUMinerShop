@@ -11,7 +11,7 @@ export const Router = () => {
   return <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route exact path="/GPUMinerShop/">
+        <Route exact path="/">
           <ItemListContainer />
         </Route>
         <Route path="/brand/:brandId">
