@@ -23,9 +23,6 @@ export const Router = () => {
         <Route path="GPUMinerShop/cart">
           <Cart />
         </Route>
-        <Route path="GPUMinerShop/counter">
-          <ItemCount />
-        </Route>
         <Route path="GPUMinerShop/*">
           <Error />
         </Route>
