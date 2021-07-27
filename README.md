@@ -1,4 +1,5 @@
 Proyecto realizado en ReactJS utilizando [Create React App]
+
 Para el estilado se utilizó [Material UI]
 
 [Ver Proyecto FUNCIONANDO]( ), siendo un ecommerce.
@@ -13,4 +14,5 @@ La temática del ecommerce es una tienda de placas de video destinadas a la mine
 * ** *** **** ***** **** *** ** * 
 
 Recordá instalar todas las dependencias del proyecto ejecutando el comando: npm install
+
 Luego ejecuta el comando: npm run start
