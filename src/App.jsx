@@ -8,6 +8,7 @@ import { ItemDetailContainer } from './screens/ItemDetailContainer/ItemDetailCon
 import { Cart } from './screens/Cart/Cart'
 import { Error } from './screens/Error/Error'
 import { NavBar } from './components/NavBar/NavBar'
+
 function App () {
   return (
     <ThemeProvider theme={theme}>
